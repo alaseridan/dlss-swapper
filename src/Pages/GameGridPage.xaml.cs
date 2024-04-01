@@ -517,6 +517,7 @@ If you have checked these and your game is still not showing up there may be a b
             {
                 SuggestedStartLocation = PickerLocationId.ComputerFolder,
             };
+            folderPicker.FileTypeFilter.Add(".exe");
 
             var installPath = String.Empty;
             try
