@@ -269,10 +269,10 @@ namespace DLSS_Swapper.Pages
                 await dialog2.ShowAsync();
                 return;*/
             
-                var gameControl = new GameControl(game);              
-                await gameControl.ShowAsync();
+                //var gameControl = new GameControl(game); //moved to EditGameButton_Click             
+                //await gameControl.ShowAsync();
 
-                return;
+                //return;
                 EasyContentDialog dialog;
 
                 if (game.HasDLSS == false)
@@ -646,6 +646,13 @@ If you have checked these and your game is still not showing up there may be a b
 
                 FilterGames();
             }
+        }
+
+        async void EditGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            Game game = (Game)((Button)e.OriginalSource).DataContext;
+            var gameControl = new GameControl(game);
+            await gameControl.ShowAsync();
         }
     }
 }

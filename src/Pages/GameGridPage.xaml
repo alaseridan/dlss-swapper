@@ -81,6 +81,7 @@
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
 
+
                         <TextBlock Text="{Binding Title}" Margin="20" TextWrapping="WrapWholeWords" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{ThemeResource ButtonForegroundColor}" />
 
                         <!-- Weird, but allows image to strecth centered rather than left align -->
@@ -93,7 +94,14 @@
                                 </ImageBrush>
                             </Border.Background>
                         </Border>
-                        
+
+                        <Grid VerticalAlignment="Top" HorizontalAlignment="Right">
+                            <Button ToolTipService.ToolTip="Edit" Click="EditGameButton_Click">
+                                <Button.Content>
+                                    <FontIcon Style="{StaticResource SagoeFluentIconsFontIcon}" Glyph="&#xE70F;"/>
+                                </Button.Content>
+                            </Button>
+                        </Grid>
                         <Grid VerticalAlignment="Bottom"  Background="#88000000" Padding="8" ColumnSpacing="8">
 
                             <Grid.ColumnDefinitions>
